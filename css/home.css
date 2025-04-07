@@ -1,0 +1,262 @@
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px 100px;
+}
+section h3 {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+}
+
+/*------------------------SLIDER-------------------*/
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+    height: 500px;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(133, 133, 133, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*------------------------ARROW-------------------*/
+
+.prev-btn {
+    left: 20px;
+}
+.next-btn {
+    right: 20px;
+}
+
+/*------------------------SLIDER DOT-------------------*/
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.slider-dots .dot.active {
+    background-color: white;
+}
+
+/*------------------------POSTER DIVIDER-------------------*/
+
+.poster-divider {
+    margin: 0px auto;
+    max-width: 700px;  
+    width: 80%;
+    text-align: center; 
+}
+.poster-divider img {
+    width: 100%;    
+    height: auto;  
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+/*------------------------POSTE-------------------*/
+
+/* Container tổng */
+.Container-fashion {
+    display: flex;
+    font-family: "Arial", Arial, sans-serif;
+    width: 100%;
+    gap: 20px; /* Khoảng cách giữa mainpost và sidepost */
+    margin: 30px 0;
+}
+
+/*------------------------MAIN POSTE-------------------*/
+
+.mainpost-fashion {
+    width: 50%;
+    position: relative;
+}
+.mainpost-fashion img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.mainpost-fashion a p{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.mainpost-fashion p {
+    margin: 10px 0;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+/*------------------------time POSTE-------------------*/
+
+.time-post {
+    color: #777;
+    font-size: 13px;
+}
+
+/*------------------------SIDE POSTE-------------------*/
+
+.sidepost-fashion {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.postfashion {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.postfashion a {
+    text-decoration: none;
+    color: #000;
+}
+.imgfashion {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.postfashion div {
+    flex: 1;
+}
+.postfashion div a {
+    font-size: 20px;
+    line-height: 1.4;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+.postfashion div a:hover {
+    color: #555;
+}
+.time-post {
+    color: #898282;
+    font-size: 15px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* Nút xem thêm */
+.more-btn {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+    padding: 10px 20px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid black;
+    text-decoration: none;
+    width: fit-content;
+}
+.more-btn:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .Container-fashion {
+        flex-direction: column;
+    }
+    
+    .mainpost-fashion,
+    .sidepost-fashion {
+        width: 100%;
+    }
+    
+    .sidepost-fashion {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .postfashion {
+        width: calc(50% - 10px);
+    }
+}
+
+/*------------------------NEWS-------------------*/
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 80px 0;
+}
+.news-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.news-thumbnail {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.news-title {
+    font-size: 16px;
+    margin: 10px;
+    color: #333;
+}
+.news-date {
+    font-size: 12px;
+    margin: 10px;
+    color: #999;
+}
+.hidden {
+    display: none;
+}
+@media (max-width: 1024px) {
+    .news-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .news-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .news-container {
+      grid-template-columns: 1fr;
+    }
+}
