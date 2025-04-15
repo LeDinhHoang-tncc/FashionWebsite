@@ -1,0 +1,253 @@
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0px 100px;
+}
+section h3 {
+    font-family: 'Elephant',Arial, sans-serif;
+    font-size: 30px;
+    text-align:  center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+section:first-of-type {
+    margin-top: 100px;
+}
+/*------------------------Navbar side----------------------------*/
+
+.navbar-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Bahnschrift', sans-serif;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 2px solid #c2b6b6;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.navbar-side ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navbar-side ul li {
+    margin: 0 30px;
+}
+.navbar-side ul li a {
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*----------------------------------------2 CỘT----------------------------------------------------*/
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 50px auto;
+}
+.news-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.news-thumbnail {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.news-title {
+    font-family: 'Comic Sans MS', Courier, monospace;
+    font-size: 30px;
+    margin: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.hidden {
+    display: none !important;
+}
+@media (max-width: 1024px) {
+    .news-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .news-container {
+      grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .news-container {
+      grid-template-columns: 1fr;
+    }
+}
+/* Nút xem thêm */
+.more-btn {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+    padding: 10px 20px;
+    background: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid black;
+    text-decoration: none;
+    width: fit-content;
+}
+.more-btn:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+/* Nút xem thêm */
+.more-btn {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+    padding: 10px 20px;
+    background: none;
+    font-size: 20px;
+    color: #000000;
+    border: 1px solid black;
+    text-decoration: none;
+    width: fit-content;
+}
+.more-btn:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+/*----------------------------------------1 CỘT----------------------------------------------------*/
+
+.trends-container {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+.trends-item {
+    width: 420px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.trends-item:hover {
+    transform: scale(1.05);
+}
+.trends-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.trends-title {
+    font-family: 'Comic Sans MS', Courier, monospace;
+    font-size: 25px;
+    margin: 10px;
+    color: #333;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+.trends-item:hover .trends-title {
+    display: block;
+    overflow: visible;
+}
+.trends-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    font-family: 'Corbel Light', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+    color: #666;
+}
+.trends-item:hover .trends-desc {
+  display: block; /* reset -webkit-box */
+  overflow: visible;
+}
+.trends-date {
+    font-size: 15px;
+    color: #999;
+    margin: 10px;
+}
+
+/*----------------------------------------CỘT DỌC----------------------------------------------------*/
+
+.gallery-container {
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+.gallery {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+.gallery-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Comic Sans MS', Courier, monospace;
+}
+.gallerys-item {
+    display: flex;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+.gallery-image {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+}  
+.gallery-text {
+    margin-left: 100px;
+    line-height: 1.5;
+    flex: 1;
+}  
+.gallery-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+    font-family: 'Corbel Light', Courier, monospace;
+    font-weight: bold;
+    font-size: 34px;
+    color: #333;
+    margin: 0;
+    font-size: 25px;
+} 
+.gallerys-item:hover .gallery-desc {
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    overflow: visible;
+  }
+.gallery-date {
+    font-size: 12px;
+    color: #999;
+    margin: 10px 0px;
+}

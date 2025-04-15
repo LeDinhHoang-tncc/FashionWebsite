@@ -1,0 +1,499 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%
+    
+}
+main {
+    background-color: #fff9f9;
+}
+header {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 100px;
+    height: 220px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+/*-----------------THANH ĐIỀU HƯỚNG trên----------------------*/
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #c2b6b6;
+}
+/*------------------ICON MẠNG XÃ HỘI---------------------*/
+.social-icons {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all 0.3s;
+}
+.icon-circle:hover{
+    transform: translateY(-4px);
+}
+.social-icons i {
+    font-size: 30px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+.social-icons i:hover{
+    transform: translateY(-3px);
+}
+/*-----------------LOGO----------------------*/
+.logo a img {
+    width: 300px;
+    margin-right: 90px;
+}
+/*----------------NÚT ĐĂNG NHẬP-----------------------*/
+.auth-buttons a {
+    padding: 8px 12px;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.login {
+    background: none;
+    color: #000000;
+}
+.login:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+/*---------------MENU------------------------*/
+.navbar-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    width: 100%;
+
+}
+.navbar-footer ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navbar-footer ul li {
+    margin: 0 30px;
+}
+.navbar-footer ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Constantia', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+/*---------------LÀM NỔI BẬT menu------------------------*/
+#fashion {
+    color: #000000;
+}
+#fashion:hover {
+    color: #9eed47;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#beauty {
+    color: #000000;
+}
+#beauty:hover {
+    color: #5db1d7;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#culture {
+    color: #000000;
+}
+#culture:hover {
+    color: #d4ed31;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#lifestyle {
+    color: #000000;
+}
+#lifestyle:hover {
+    color: #d094ea;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#predictive {
+    color: #000000;
+}
+#predictive:hover {
+    color: #f0bf4c;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+#home {
+    color: #000000;
+}
+#home:hover {
+    color: #46edbb;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+/*-----------------TÌM KIẾM----------------------*/
+.search input {
+    padding: 8px 20px;
+    font-size: 16px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+.search i {
+    padding: 8px 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+}
+/*-----------------CỐ ĐỊNH THANH menu--------------------*/
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 99;
+    background-color: #ffffff;
+}
+.hidden-navbar {
+    display: none;
+}
+/*-----------------MENU MINI--------------------*/
+.menu-toggle {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+}
+.toggle {
+    display: none;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding-top: 50px;
+    transform: translateX(100%);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+.toggle ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-top: 50px;
+    padding-bottom: 250px;
+}
+.toggle ul li {
+    padding: 10px 0px;
+}
+.toggle ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+.toggle.active {
+    display: block;
+    transform: translateX(0);
+}
+.close-toggle {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+/*------------------------POSTER DIVIDER-------------------*/
+
+.poster-divider {
+    margin: 50px auto;
+    max-width: 700px;  
+    width: 80%;
+    text-align: center; 
+}
+.poster-divider img {
+    width: 100%;    
+    height: auto;  
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+/*-----------------NÚT ON TOP-------------------*/
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 40%;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 20px;
+    transition: background-color 0.3s;
+}
+#backToTopBtn:hover {
+    background-color: #333;
+} 
+/*-----------------NÚT CHUÔNG-------------------*/
+.floating-btn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 99;
+    background-color: #ff0000;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    line-height: 20px;
+    transition: all 0.3s;
+}
+.floating-btn i{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+/*-----------------Tooltip text-------------------*/
+.tooltip-text {
+    visibility: hidden;
+    width: 400px;
+    background-color: #000000;
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+#bellBtn:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+/*-----------------banner-------------------*/
+.banner {
+    position: fixed;
+    top: 38%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
+    gap: 5px;
+}
+.banner img {
+    width: 70px;
+    height: 300px;
+    display: block;
+    cursor: pointer;
+}
+
+
+/*-----------------FOOTER--------------------*/
+.hoang-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+/*-----------------CONTAINER--------------------*/
+.footer-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+/*-----------------H3 FOOTER--------------------*/
+.footer-section h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-section h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #ffffff;
+}
+/*-----------------ELEMENT--------------------*/
+.footer-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #bbb;
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+    color: #bbb;
+}
+.footer-section ul li i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+.footer-section a {
+    color: #bbb;
+    transition: color 0.3s;
+}
+.footer-section a:hover {
+    color: #ffffff;
+}
+/*-----------------SOCAIAL--------------------*/
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    transition: all 0.3s;
+}
+.footer-social a:hover {
+    transform: translateY(-3px);
+}
+/*-------------------NEWSLETTER--------------------*/
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+.newsletter-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.newsletter-form button {
+    background: #e65540;
+    color: white;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.newsletter-form button:hover {
+    background: #d04a36;
+}
+/*-----------------BOTTOM--------------------*/
+.footer-bottom {
+    background: #111;
+    padding: 20px 0;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+}
+/* Nút xem thêm */
+.more-btn {
+    display: block;
+    text-align: center;
+    margin: 100px auto;
+    padding: 10px 20px;
+    background: none;
+    font-size: 20px;
+    color: #000000;
+    border: 1px solid black;
+    text-decoration: none;
+    width: fit-content;
+}
+.more-btn:hover {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}

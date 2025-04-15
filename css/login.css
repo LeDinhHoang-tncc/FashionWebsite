@@ -1,0 +1,84 @@
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 50px 100px;
+}
+/*---------------------------------------ĐĂNG NHÂP----------------------------------------*/
+.dangnhap {
+    width: 700px;
+    padding: 20px;
+    text-align: center;
+}
+.dangnhap p {
+    text-align: left;
+    margin-bottom: 25px;
+}
+.dangnhap h2 {
+    text-align: center;
+    margin-bottom: 70px;
+}
+/*---------------------------------------*/
+.nhapthongtin-dangnhap {
+    text-align: left;
+    margin-bottom: 25px;
+}
+.nhapthongtin-dangnhap label {
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.nhapthongtin-dangnhap input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/*---------------------------------------*/
+.nhothongtin {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.nhothongtin input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.nhothongtin label {
+    cursor: pointer;
+}
+
+.dangky {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.dangky a {
+    text-decoration: underline;
+}
+/*---------------------------------------*/
+.nut-dangnhap {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #000000;
+    margin-bottom: 250px;
+}
+.nut-dangnhap:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
